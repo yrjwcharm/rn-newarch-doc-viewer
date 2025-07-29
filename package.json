@@ -1,0 +1,62 @@
+{
+  "author": "闫瑞锋",
+  "bugs": {
+    "url": "https://github.com/yrjwcharm/rn-newarch-doc-viewer/issues"
+  },
+  "codegenConfig": {
+    "android": {
+      "javaPackageName": "com.nativedocviewer"
+    },
+    "ios": {
+      "modulesProvider": {
+        "RNDocViewer": "RCTNativeDocViewer"
+      }
+    },
+    "jsSrcsDir": "./src/specs",
+    "name": "NativeDocViewerSpec",
+    "type": "modules"
+  },
+  "dependencies": {},
+  "description": "这是一款使用ReactNative Fabric新架构加载Svga动画的开源插件",
+  "devDependencies": {
+    "@types/react": "^18.2.47",
+    "react": "18.2.0",
+    "react-native": "0.72.5"
+  },
+  "files": [
+    "android",
+    "index.ts",
+    "ios",
+    "src",
+    "rn-newarch-doc-viewer.podspec",
+    "specs"
+  ],
+  "homepage": "https://github.com/yrjwcharm/rn-newarch-doc-viewer#readme",
+  "keywords": [
+    "android",
+    "doc",
+    "docviewer",
+    "docx",
+    "ios",
+    "pdf",
+    "pptx",
+    "react-native",
+    "turbomodules",
+    "xlsx"
+  ],
+  "license": "ISC",
+  "main": "index.ts",
+  "name": "rn-newarch-doc-viewer",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yrjwcharm/rn-newarch-doc-viewer.git"
+  },
+  "scripts": {
+    "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name react-native-ohos-svgaplayer --cpp-output-path ../../harmony/svgaplayer/src/main/cpp/generated --ets-output-path ../../harmony/svgaplayer/src/main/ets/generated --turbo-modules-spec-paths ./src  --arkts-components-spec-paths ./src"
+  },
+  "version": "0.0.16"
+}
