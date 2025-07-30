@@ -40,8 +40,8 @@ yarn add rn-newarch-doc-viewer
     "postinstall-postinstall": "^2.1.0",
     "react": "18.2.0",
     "react-native": "0.72.5",
--    "rn-newarch-doc-viewer":"^0.0.1"
-+   "react-native-doc-viewer":"npm:rn-newarch-doc-viewer@0.0.16",
+-    "rn-newarch-doc-viewer":"^0.0.17"
++   "react-native-doc-viewer":"npm:rn-newarch-doc-viewer@0.0.17",
     "react-native-ohos-docviewer": "^0.0.3"
   },
 ```
@@ -69,7 +69,7 @@ import { getBase64ImagePath } from "./imgbase64";
 const App = () => {
   useEffect(() => {
     //监听文件预览下载进度
-    cosnt subscribtion = DeviceEventEmitter.addListener("RNDownloaderProgress", (event) => {
+    const subscribtion = DeviceEventEmitter.addListener("RNDownloaderProgress", (event) => {
       // 添加事件处理
       console.log("Download progress:", event.progress);
     });
@@ -83,6 +83,10 @@ const App = () => {
       [
         {
           url: "https://i.gsxcdn.com/2015162519_i828z3ug.jpeg",
+          //ios required fileName
+          fileName:'sample',
+          //android required cache
+          cache:false
         },
       ],
       (error: any, url: string) => {
@@ -98,6 +102,10 @@ const App = () => {
       [
         {
           url: "https://calibre-ebook.com/downloads/demos/demo.docx",
+           //ios required fileName
+          fileName:'demo',
+          //android required cache
+          cache:false
         },
       ],
       (error: any, url: string) => {
@@ -130,7 +138,10 @@ const App = () => {
       [
         {
           url: "https://storage.googleapis.com/need-sure/example",
-          fileName: "example",
+            //ios required fileName
+          fileName:'example',
+          //android required cache
+          cache:false
           fileType: "xml",
         },
       ],
