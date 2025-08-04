@@ -44,7 +44,7 @@
     "turbomodules",
     "xlsx"
   ],
-  "license": "ISC",
+ "license": "MIT",
   "main": "index.ts",
   "name": "rn-newarch-doc-viewer",
   "peerDependencies": {
